@@ -29,7 +29,7 @@ void setAssists(struct SoccerPlayer* player, int assists) {
 
 // Print all player data
 void printData(struct SoccerPlayer* player) {
-    printf("NAME: %s | MATCHES: %d | GOALS: %d | ASSISTS: %d", 
+    printf("NAME: %s | MATCHES: %d | GOALS: %d | ASSISTS: %d\n", 
     player->name, player->matches, player->goals, player->assists);
 }
 
@@ -40,7 +40,7 @@ void sumPlayerData(struct SoccerPlayer* player1, struct SoccerPlayer* player2) {
     int totalGoals = player1->goals + player2->goals;
     int totalAssists = player1->assists + player2->assists;
 
-    printf("%s + %s | MATCHES: %d | GOALS: %d | ASSISTS: %d",
+    printf("%s + %s | MATCHES: %d | GOALS: %d | ASSISTS: %d\n",
     player1->name, player2->name, totalMatches, totalGoals, totalAssists);
 }
 
@@ -71,5 +71,17 @@ int main() {
 
     sumPlayerData(&cr7, &messi);
 
-    return 0;
+    // Print if CR7 is a good player
+    if (goodPlayer(&cr7)) {
+        printf("True\n");
+    } else {
+        printf("False\n");
+    }
+
+    // Print if Messi is a good player (we already know the response)
+    if (goodPlayer(&messi)) {
+        printf("True\n");
+    } else {
+        printf("False\n");
+    }
 }
