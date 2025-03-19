@@ -1,25 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
 struct SoccerPlayer {
-  char name[50];
-  int matches;
-  int goals;
-  int assists;
+    char name[50];
+    int matches;
+    int goals;
+    int assists;
 };
 
-int main() {
-  struct SoccerPlayer sp;
+void setName(struct SoccerPlayer* player, const char* name) {
+    strncpy(player->name, name, sizeof(player->name) - 1);
+    player->name[sizeof(player->name) - 1] = '\0';
+}
 
-  printf("Player name: ");
-  scanf("%s", &sp.name);
+void setMatches(struct SoccerPlayer* player, int matches) {
+    player->matches = matches;
+}
 
-  printf("Quantity of matches: ");
-  scanf("%s", &sp.matches);
+void setGoals(struct SoccerPlayer* player, int goals) {
+    player->goals = goals;
+}
 
-  printf("Quantity of goals: ");
-  scanf("%s", &sp.goals);
-
-  printf("Quantity of assists: ");
-  scanf("%s", &sp.assists);
-
-};
+void setAssists(struct SoccerPlayer* player, int assists) {
+    player->assists = assists;
+}
