@@ -11,6 +11,15 @@ int main() {
   struct SoccerPlayer sp;
 
   printf("Player name: ");
-  scanf("%d", &sp.name);
+  scanf("%s", &sp.name);
+
+  printf("Quantity of matches: ");
+  scanf("%s", &sp.matches);
+
+  printf("Quantity of goals: ");
+  scanf("%s", &sp.goals);
+
+  printf("Quantity of assists: ");
+  scanf("%s", &sp.assists);
 
 };
