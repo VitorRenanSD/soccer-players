@@ -8,6 +8,7 @@ struct SoccerPlayer {
     int assists;
 };
 
+
 // Setter methods
 void setName(struct SoccerPlayer* player, const char* name) {
     strncpy(player->name, name, sizeof(player->name) - 1);
