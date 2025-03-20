@@ -79,7 +79,7 @@ int main() {
         printf("False\n");
     }
 
-    // Print if Messi is a good player (we already know the response)
+    // Print if Messi is a good player (we already know the answer)
     if (goodPlayer(&messi)) {
         printf("True\n");
     } else {
